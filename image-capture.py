@@ -6,7 +6,7 @@ from PIL import Image
 import math
 
 
-zoomLevel = 1 # zoom level can be set between 1 and 4
+zoomLevel = 2 # zoom level can be set between 1 and 4
 temporaryDirectoryName = 'temp_images' # the directory where the temporary images are stored
 outputDirectoryName = 'output' # the folder where the files are outputted to
 removeTemporyFiles = True # if the files should be removed
@@ -64,7 +64,7 @@ def getImages( timestamps ):
 
     images = []
     for index, timestamp in enumerate(timestamps):
-        filename = str(timestamp) + '.png'
+        filename = str(timestamp) + '.jpeg'
         if os.path.isfile( str(timestamp)+'.png' ):
             print('file ' + filename + ' already exists, skipping')
             continue
